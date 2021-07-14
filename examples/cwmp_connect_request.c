@@ -117,7 +117,7 @@ int main(int argc, char **argv)
     conn = xmpp_conn_new(ctx);
 
     /* Deny plaintext connection */
-    xmpp_conn_set_flags(conn, XMPP_CONN_FLAG_MANDATORY_TLS);
+    xmpp_conn_set_flags(conn, XMPP_CONN_FLAG_TRUST_TLS | XMPP_CONN_FLAG_MANDATORY_TLS);
 
     /* setup authentication information */
     xmpp_conn_set_jid(conn, argv[1]);
